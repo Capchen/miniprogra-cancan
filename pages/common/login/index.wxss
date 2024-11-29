@@ -4,14 +4,17 @@
   display: flex;
   background-color: #F8F8EC;
   position: relative;
+  background-image: url('https://pub-af92a95c8fa548e9ba1d0af90192aab9.r2.dev/login-bg.png');
+  background-size: 100%;
+  background-position: 100%;
 }
 .lottie-action {
   position: absolute;
   z-index: 10;
-  top: 0;
+  top: calc(20vh - 180rpx);
   left: 30rpx;
-  width: 100rpx;
-  height: 100rpx
+  width: 200rpx;
+  height: 200rpx
 }
 .login-container {
   width: 90%;
@@ -20,9 +23,9 @@
   padding: 30rpx;
   box-sizing: border-box;
   position: absolute;
-  top: 50%;
+  top: 20vh;
   left: 50%;
-  transform: translate(-50%, -90%);
+  transform: translate(-50%);
 }
 
 .login-container .login-item {
@@ -55,4 +58,16 @@
   text-transform: uppercase;
   letter-spacing: 2rpx;
   margin-top: 20rpx;
+}
+
+.footer-image {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 350rpx;
+  background-color: #F8F8EC;
+  font-size: 0;
+  display: inline-block;
 }
