@@ -1,8 +1,0 @@
-<view class="index-home">
-  <view class="video-warp">
-    <view class="button-group">
-      <t-button theme="primary" block size="large" t-class="group-btn">上传</t-button>
-      <t-button theme="light" block size="large" t-class="group-btn">预览</t-button>
-    </view>
-  </view>
-</view>

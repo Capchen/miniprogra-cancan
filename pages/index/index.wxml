@@ -7,12 +7,10 @@
     loop
     muted
     object-fit="fill"
-    src="" />
-    <!-- https://pub-af92a95c8fa548e9ba1d0af90192aab9.r2.dev/cancan.mp4 -->
+    src="https://pub-af92a95c8fa548e9ba1d0af90192aab9.r2.dev/cancan.mp4" />
   </view>
   <view class="video-bg"></view>
   <view class="button-group">
-    <t-button theme="primary" block size="large" t-class="group-btn">上传</t-button>
-    <t-button theme="light" block size="large" t-class="group-btn">预览</t-button>
+    <t-button theme="primary" block size="large" t-class="group-btn" bind:tap="startUpload">上传</t-button>
   </view>
 </view>

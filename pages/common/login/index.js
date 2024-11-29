@@ -8,6 +8,7 @@ Page({
         this.lottieInit()
     },
     onUnload() {
+        this.ani && this.ani.destroy()
     },
     onInputAccount(e) {
         this.setData({
@@ -36,5 +37,11 @@ Page({
           //   this.ani.goToAndStop(0, true)
           // })
         })
-      },
+    },
+    submitLogin() {
+        console.log('submitLogin', this.data.textAccount, this.data.textPassword)
+        wx.reLaunch({
+            url: '/pages/index/index'
+        })
+    }
 })

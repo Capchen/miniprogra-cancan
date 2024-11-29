@@ -1,13 +1,33 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/common/perview/index",
+    "pages/perview/index",
     "pages/common/login/index"
   ],
   "window": {
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "CC",
     "navigationBarBackgroundColor": "#f8f8ec"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#E2C651",
+    "borderStyle": "white",
+    "backgroundColor": "#F8F8EC",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "assets/images/tabbar/home.png",
+        "selectedIconPath": "assets/images/tabbar/home-active.png"
+      },
+      {
+        "pagePath": "pages/perview/index",
+        "text": "图库",
+        "iconPath": "assets/images/tabbar/preview.png",
+        "selectedIconPath": "assets/images/tabbar/preview-active.png"
+      }
+    ]
   },
   "componentFramework": "glass-easel",
   "sitemapLocation": "sitemap.json",

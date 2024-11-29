@@ -1,5 +1,14 @@
 /**app.wxss**/
 page {
+  /* button */
+  --td-button-primary-color: #F8F8EC;
+  --td-button-primary-bg-color: #79976B;
+  --td-button-primary-active-bg-color: #A3BFA7;
+  --td-button-primary-border-color: #79976B;
+  --td-button-light-color: #79976B;
+  --td-button-light-bg-color: #F8F8EC;
+  --td-button-light-active-bg-color: #E2C651;
+  --td-button-light-border-color: #79976B;
   /* --td-brand-color: #F8F8EC;
   --td-brand-color-active: #A3BFA7;
   --td-brand-color-disabled: #F8F8EC;

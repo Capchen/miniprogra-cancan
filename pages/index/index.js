@@ -33,4 +33,9 @@ Page({
       // })
     })
   },
+  startUpload() {
+    wx.navigateTo({
+      url: '/pages/common/login/index',
+    })
+  }
 })

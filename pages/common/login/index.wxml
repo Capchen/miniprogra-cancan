@@ -15,7 +15,7 @@
       </view>
       <t-input placeholder="输入密码" type="password" value="{{textPassword}}" clearable />
     </view>
-    <view class="login-btn">登录</view>
+    <view class="login-btn" bind:tap="submitLogin">登录</view>
   </view>
   <!-- <image class="footer-image" src="../../../assets/images/snow.png" mode="scaleToFill" /> -->
 </view>
