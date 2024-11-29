@@ -1,0 +1,58 @@
+.login-page {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  background-color: #F8F8EC;
+  position: relative;
+}
+.lottie-action {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 30rpx;
+  width: 100rpx;
+  height: 100rpx
+}
+.login-container {
+  width: 90%;
+  background-color: #A3BFA7;
+  border-radius: 32rpx;
+  padding: 30rpx;
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -90%);
+}
+
+.login-container .login-item {
+  --td-input-bg-color: #F8F8EC;
+  --td-input-border-color: #E2C651;
+  --td-input-default-text-color: #79976B;
+  --td-input-placeholder-text-color: #79976B;
+  display: flex;
+  align-items: center;
+  border-radius: 32rpx;
+  background-color: #F8F8EC;
+  box-sizing: border-box;
+  padding: 0 20rpx;
+  gap: 10rpx;
+  overflow: hidden;
+  margin-bottom: 20rpx;
+}
+
+.login-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 32rpx;
+  background-color: #79976B;
+  opacity: 0.8;
+  color: #F8F8EC;
+  padding: 20rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2rpx;
+  margin-top: 20rpx;
+}

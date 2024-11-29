@@ -1,0 +1,20 @@
+<view class="login-page">
+  <view class="lottie-action">
+    <canvas id="c1" type="2d" style="width: 100%; height:100%;" ></canvas>
+  </view>
+  <view class="login-container">
+    <view class="login-item">
+      <view slot="suffix" class="suffix">
+        <t-icon name="user" size="24" color="#79976B" />
+      </view>
+      <t-input placeholder="输入账号" value="{{textAccount}}" clearable />
+    </view>
+    <view class="login-item">
+      <view slot="suffix" class="suffix">
+        <t-icon name="lock-on" size="24" color="#79976B" />
+      </view>
+      <t-input placeholder="输入密码" type="password" value="{{textPassword}}" clearable />
+    </view>
+    <view class="login-btn">登录</view>
+  </view>
+</view>

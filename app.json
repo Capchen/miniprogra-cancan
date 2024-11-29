@@ -1,11 +1,12 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/common/perview/index",
+    "pages/common/login/index"
   ],
   "window": {
     "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "test",
+    "navigationBarTitleText": "CC",
     "navigationBarBackgroundColor": "#f8f8ec"
   },
   "componentFramework": "glass-easel",

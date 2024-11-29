@@ -1,9 +1,9 @@
 /**app.wxss**/
 page {
-  --td-brand-color: #BAC680;
+  /* --td-brand-color: #F8F8EC;
   --td-brand-color-active: #A3BFA7;
   --td-brand-color-disabled: #F8F8EC;
   --td-brand-color-focus: #E2C651;
-  --td-brand-color-light: #79976B;
-  --td-brand-color-light-active: #E2C651;
+  --td-brand-color-light: #BAC680;
+  --td-brand-color-light-active: #79976B; */
 }
