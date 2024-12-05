@@ -9,6 +9,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "howler": "^2.2.4",
     "lottie-miniprogram": "^1.0.12",
     "tdesign-miniprogram": "^1.6.2"
   }
