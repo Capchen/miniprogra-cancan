@@ -7,13 +7,13 @@
       <view slot="suffix" class="suffix">
         <t-icon name="user" size="24" color="#79976B" />
       </view>
-      <t-input placeholder="输入账号" value="{{textAccount}}" clearable />
+      <t-input placeholder="输入账号" value="{{textAccount}}" bindchange="onInputAccount" clearable />
     </view>
     <view class="login-item">
       <view slot="suffix" class="suffix">
         <t-icon name="lock-on" size="24" color="#79976B" />
       </view>
-      <t-input placeholder="输入密码" type="password" value="{{textPassword}}" clearable />
+      <t-input placeholder="输入密码" type="password" value="{{textPassword}}" bindchange="onInputPassword" clearable />
     </view>
     <view class="login-btn" bind:tap="submitLogin">登录</view>
   </view>

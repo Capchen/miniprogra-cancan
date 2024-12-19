@@ -12,6 +12,6 @@
   </view>
   <view class="video-bg"></view>
   <view class="button-group">
-    <t-button theme="primary" block size="large" t-class="group-btn" bind:tap="startUpload">上传</t-button>
+    <t-button theme="primary" block size="large" t-class="group-btn" bind:tap="startUpload">上传 / 拍摄</t-button>
   </view>
 </view>

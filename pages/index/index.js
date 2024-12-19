@@ -1,5 +1,6 @@
 // index.js
 import lottie from 'lottie-miniprogram'
+import { loginCheck } from '../../utils/util'
 Page({
   data: {
     ani: null,
@@ -9,6 +10,9 @@ Page({
   },
   onUnload() {
     this.ani && this.ani.destroy()
+  },
+  onShow() {
+    
   },
   lottieInit() {
     wx.createSelectorQuery().select('#c1').fields({ node: true, size: true })
@@ -33,9 +37,25 @@ Page({
       // })
     })
   },
+
+  chooseImage() {
+    wx.chooseImage({
+      count: 1,
+      sizeType: ['original', 'compressed'],
+      sourceType: ['album', 'camera'],
+      success: (res) => {
+        const tempFilePaths = res.tempFilePaths
+        console.log('tempFilePaths', tempFilePaths)
+      }
+    })
+  },
   startUpload() {
-    wx.navigateTo({
-      url: '/pages/common/login/index',
+    loginCheck().then(() => {
+      this.chooseImage()
+    }).catch(() => {
+      wx.navigateTo({
+        url: '/pages/common/login/index',
+      })
     })
   }
 })
