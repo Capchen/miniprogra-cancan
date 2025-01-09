@@ -1,0 +1,7 @@
+<t-loading theme="custom" class="loading-wrapper">
+  <t-image
+    slot="indicator"
+    style="width: 120rpx; height: 120rpx;"
+    src="https://pub-af92a95c8fa548e9ba1d0af90192aab9.r2.dev/025.png"
+  />
+</t-loading>

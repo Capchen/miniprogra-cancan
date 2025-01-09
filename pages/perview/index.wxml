@@ -5,7 +5,7 @@
     bindscrolltolower="scrollToLower"
     >
     <view class="list-item" bind:tap="previewMedia">
-      <t-image class="list-item-image" src="https://gyenno.oss-cn-beijing.aliyuncs.com/pub/miniprogram/ydl-mini-parkinson-specialty-center-map/image/const-banner.png" mode="aspectFill" aria-label="">
+      <t-image class="list-item-image" src="" mode="aspectFill" aria-label="">
         <t-loading slot="loading" theme="spinner" size="40rpx" loading />
       </t-image>
     </view>

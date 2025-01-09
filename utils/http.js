@@ -38,6 +38,37 @@ class HttpService {
     });
   }
 
+  uploadFile(url, data, header) {
+    const token = wx.getStorageSync('token');
+
+    if (token) {
+      header = {
+        ...header,
+        'Authorization': 'Bearer ' + token
+      };
+    }
+
+    return new Promise((resolve, reject) => {
+      this.requestTask = wx.uploadFile({
+        url: this.baseUrl + url,
+        filePath: data.filePath,
+        name: data.name,
+        formData: data.formData || {},
+        header: header,
+        success: (res) => {
+          if (res.statusCode === 201) {
+            resolve(res);
+          } else {
+            reject(res);
+          }
+        },
+        fail: (err) => {
+          reject(err);
+        }
+      });
+    });
+  }
+
   get(url, data, header) {
     return this.request(url, 'GET', data, header);
   }
@@ -52,6 +83,10 @@ class HttpService {
 
   delete(url, data, header) {
     return this.request(url, 'DELETE', data, header);
+  }
+
+  upload(url, data, header) {
+    return this.uploadFile(url, data, header);
   }
   
 }

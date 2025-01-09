@@ -4,7 +4,7 @@
   display: flex;
   background-color: #F8F8EC;
   position: relative;
-  /* background-image: url('https://pub-af92a95c8fa548e9ba1d0af90192aab9.r2.dev/login-bg.png'); */
+  background-image: url('https://pub-af92a95c8fa548e9ba1d0af90192aab9.r2.dev/login-bg.png');
   background-size: 100%;
   background-position: 100%;
 }

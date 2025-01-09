@@ -55,7 +55,6 @@ Page({
     }
     login(loginData).then(res => {
       console.log('login', res)
-      debugger
       wx.setStorageSync('token', res.data.token)
       wx.reLaunch({
         url: '/pages/index/index',

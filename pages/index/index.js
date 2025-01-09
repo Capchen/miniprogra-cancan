@@ -1,61 +1,54 @@
-// index.js
-import lottie from 'lottie-miniprogram'
+import Message from 'tdesign-miniprogram/message/index';
 import { loginCheck } from '../../utils/util'
-Page({
+import { uplaodFile } from '../../apis/index'
+Component({
   data: {
-    ani: null,
+    showLoading: false,
   },
-  onReady() {
-    // this.lottieInit()
-  },
-  onUnload() {
-    this.ani && this.ani.destroy()
-  },
-  onShow() {
-    
-  },
-  lottieInit() {
-    wx.createSelectorQuery().select('#c1').fields({ node: true, size: true })
-    .exec(res => {
-      const canvas = res[0].node
-      const context = canvas.getContext('2d')
-      const dpr = wx.getSystemInfoSync().pixelRatio
-      canvas.width = res[0].width * dpr
-      canvas.height = res[0].height * dpr
-      context.scale(dpr, dpr)
-      lottie.setup(canvas)
-      this.ani = lottie.loadAnimation({
-        loop: true,
-        autoplay: true,
-        animationData: require('./girl'),
-        rendererSettings: {
-          context,
-        },
+  methods: {
+    chooseImage() {
+      wx.chooseImage({
+        count: 1,
+        sizeType: ['original', 'compressed'],
+        sourceType: ['album', 'camera'],
+        success: (res) => {
+          this.setData({
+            showLoading: true,
+          })
+          const tempFilePaths = res.tempFilePaths
+          console.log('tempFilePaths', tempFilePaths)
+          const params = {
+            filePath: tempFilePaths[0],
+            name: 'file',
+          }
+          uplaodFile(params).then(res => {
+            console.log('uplaodFile', res)
+            Message.success({
+              duration: 3000,
+              content: '图片上传成功🎉',
+            });
+          }).catch(err => {
+            console.log('uplaodFile err', err)
+            Message.success({
+              duration: 3000,
+              content: '图片上传失败😭',
+            });
+          }).finally(() => {
+            this.setData({
+              showLoading: false,
+            })
+          })
+        }
       })
-      // this.ani.addEventListener('complete', () => {
-      //   this.ani.goToAndStop(0, true)
-      // })
-    })
-  },
-
-  chooseImage() {
-    wx.chooseImage({
-      count: 1,
-      sizeType: ['original', 'compressed'],
-      sourceType: ['album', 'camera'],
-      success: (res) => {
-        const tempFilePaths = res.tempFilePaths
-        console.log('tempFilePaths', tempFilePaths)
-      }
-    })
-  },
-  startUpload() {
-    loginCheck().then(() => {
-      this.chooseImage()
-    }).catch(() => {
-      wx.navigateTo({
-        url: '/pages/common/login/index',
+    },
+    startUpload() {
+      loginCheck().then(() => {
+        this.chooseImage()
+      }).catch(() => {
+        wx.navigateTo({
+          url: '/pages/common/login/index',
+        })
       })
-    })
-  }
+    }
+  },
 })

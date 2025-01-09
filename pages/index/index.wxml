@@ -14,4 +14,5 @@
   <view class="button-group">
     <t-button theme="primary" block size="large" t-class="group-btn" bind:tap="startUpload">上传 / 拍摄</t-button>
   </view>
+  <c-loading wx:if="{{showLoading}}" />
 </view>

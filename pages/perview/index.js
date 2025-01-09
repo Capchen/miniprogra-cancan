@@ -1,22 +1,22 @@
 // index.js
-Page({
+Component({
   data: {
     ani: null,
   },
-  onReady() {
-    // this.lottieInit()
+  attached: function () {
+    // 获取图库数据
   },
-  onUnload() {
-  },
-  scrollToLower() {
-  },
-  previewMedia() {
-    wx.previewMedia({
-      sources: [
-        {
-          url: 'https://gyenno.oss-cn-beijing.aliyuncs.com/pub/miniprogram/ydl-mini-parkinson-specialty-center-map/image/const-banner.png'
-        },
-      ],
-    })
+  methods: { 
+    scrollToLower() {
+    },
+    previewMedia() {
+      wx.previewMedia({
+        sources: [
+          {
+            url: 'https://gyenno.oss-cn-beijing.aliyuncs.com/pub/miniprogram/ydl-mini-parkinson-specialty-center-map/image/const-banner.png'
+          },
+        ],
+      })
+    },
   },
 })
