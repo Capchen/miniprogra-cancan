@@ -2,6 +2,7 @@
   "pages": [
     "pages/index/index",
     "pages/perview/index",
+    "pages/renovation/index",
     "pages/common/login/index"
   ],
   "window": {
@@ -26,6 +27,12 @@
         "text": "图库",
         "iconPath": "assets/images/tabbar/preview.png",
         "selectedIconPath": "assets/images/tabbar/preview-active.png"
+      },
+      {
+        "pagePath": "pages/renovation/index",
+        "text": "装修文档",
+        "iconPath": "assets/images/tabbar/house.png",
+        "selectedIconPath": "assets/images/tabbar/house.png"
       }
     ]
   },

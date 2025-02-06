@@ -1,0 +1,4 @@
+<view class="file-list">
+  <c-loading wx:if="{{showLoading}}" />
+  <t-cell bind:tap="downPdf" title="装修总结" description="作者分享了他的装修过程及一些细节" hover arrow />
+</view>
