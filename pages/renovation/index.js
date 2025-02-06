@@ -34,9 +34,10 @@ Component({
         },
       })
     },
-    navigatorPdfList() {
+    navigatorPdfList(e) {
+      const key = e.currentTarget.dataset.key
       wx.navigateTo({
-        url: '/pages/renovation/components/pdf-file-list/index',
+        url: '/pages/renovation/components/pdf-file-list/index?key=' + key,
       })
     }
   },

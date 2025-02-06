@@ -1,5 +1,9 @@
 <view class="file-list">
   <c-loading wx:if="{{showLoading}}" />
   <t-cell bind:tap="downPdf" title="装修总结" description="作者分享了他的装修过程及一些细节" hover arrow />
-  <t-cell bind:tap="navigatorPdfList" title="全屋定制设计&报价" description="一些文档" hover arrow />
+  <t-cell bind:tap="navigatorPdfList" data-key="wholeHouse" title="全屋定制设计&报价" description="" hover arrow />
+  <t-cell bind:tap="navigatorPdfList" data-key="cupboard" title="橱柜设计&报价" description="" hover arrow />
+  <t-cell bind:tap="navigatorPdfList" data-key="supervision" title="监理验收报告" description="" hover arrow />
+  <t-cell bind:tap="navigatorPdfList" data-key="cad" title="装修平面设计图" description="" hover arrow />
+  <t-cell bind:tap="navigatorPdfList" data-key="quotation" title="装修报价单" description="" hover arrow />
 </view>
