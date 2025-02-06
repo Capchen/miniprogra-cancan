@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/perview/index",
     "pages/renovation/index",
-    "pages/common/login/index"
+    "pages/common/login/index",
+    "pages/renovation/components/pdf-file-list/index"
   ],
   "window": {
     "navigationBarTextStyle": "black",

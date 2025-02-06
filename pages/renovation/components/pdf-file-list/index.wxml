@@ -1,0 +1,4 @@
+<view class="file-list">
+  <c-loading wx:if="{{showLoading}}" />
+  <t-cell wx:for="{{wholeHouse}}" bind:tap="downPdf" data-item="{{item}}" title="{{item.title}}" description="{{item.desc}}" hover arrow />
+</view>
